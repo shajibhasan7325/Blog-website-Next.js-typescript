@@ -1,9 +1,10 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&family=Raleway:wght@100;200;300;400;500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > * {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -22,5 +23,24 @@ a {
   body {
     color: white;
     background: black;
+  }
+}
+
+.input-class {
+  @apply block px-3 py-2 mt-1 text-sm bg-white border rounded-full w-60 border-slate-300 placeholder-slate-500;
+  @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
+}
+
+.lod {
+  @apply w-10 h-10 ease-linear border-gray-200 rounded-full border-spacing-4;
+  border-top-color: #363ce0;
+  animation: sp 1.2s linear infinite;
+}
+@keyframes sp {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
